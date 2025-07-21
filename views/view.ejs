@@ -23,6 +23,11 @@
 document.getElementById('manageLink').addEventListener('click', function(event) {
     event.preventDefault();
     // Get values from the form
+    var title = encodeURIComponent(document.getElementById('title').value);
+    var content = encodeURIComponent(document.getElementById('content').value);
+    // Add date (set as current date for demonstration)
+    var date = encodeURIComponent(new Date().toISOString().slice(0, 10)); // "YYYY-MM-DD"
+
     // Construct URL
     var url = `/manage?title=${title}&date=${date}&content=${content}`;
 
