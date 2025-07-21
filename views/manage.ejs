@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs")%>
+<div class="container">
+    <nav>
+      <a href="/create">Create Post</a> | 
+      <a href="/">View Posts</a>
+    </nav>
+    <h1>Manage Blog Posts</h1>
+    <table class="posts-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Welcome to My Blog!</td>
+          <td>2025-07-21</td>
+          <td>
+            <span class="action-btn">Edit</span>
+            <span class="action-btn">Delete</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Second Post Example</td>
+          <td>2025-07-18</td>
+          <td>
+            <span class="action-btn">Edit</span>
+            <span class="action-btn">Delete</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="hint">* (No scripting: actions are disabled for demo)</p>
+  </div>
+<%- include("partials/footer.ejs")%>

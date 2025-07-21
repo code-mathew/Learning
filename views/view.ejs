@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs")%>
+<div class="container">
+    <nav>
+      <a href="/">Create Post</a> | 
+      <a href="/manage" id="manageLink">Manage Posts</a>
+    </nav>
+    <h1>All Blog Posts</h1>
+    <div class="posts-list">
+        <% if(locals.title && locals.date){%>
+      <div class="post-card">
+        <div class="post-title"><%= title%></div>
+        <div class="post-date"><%= date%></div>
+        <div class="post-content">
+          <%= content%>
+        </div>
+      </div>
+      <%} else {%>
+        <p>No posts created yet!</p>
+     <% }%>
+    </div>
+  </div>
+  <script>
+document.getElementById('manageLink').addEventListener('click', function(event) {
+    event.preventDefault();
+    // Get values from the form
+    // Construct URL
+    var url = `/manage?title=${title}&date=${date}&content=${content}`;
+
+    // Redirect
+    window.location.href = url;
+});
+</script>
+<%- include("partials/footer.ejs")%>

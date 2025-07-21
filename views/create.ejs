@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs")%>
+  
+  <div class="container">
+    <nav>
+      <a href="view.html">View Posts</a> | 
+    </nav>
+    <h1>Create New Post</h1>
+    <form class="blog-form" autocomplete="off" method="post" action="/view">
+      <label for="title">Title</label>
+      <input type="text" id="title" maxlength="80" name="title" placeholder="Enter post title" required>
+
+      <label for="content">Content</label>
+      <textarea id="content" rows="6" maxlength="900" name="content" placeholder="Write your blog post..." required></textarea>
+
+      <button type="submit">Create Post</button>
+    </form>
+  </div>
+<%- include('partials/footer.ejs')%>
